@@ -1,0 +1,137 @@
+ body {
+     margin: 0;
+     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: whitesmoke;
+    color: #333;
+}
+
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  gap: 50px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  background: gray;
+  
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  gap: 50px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+  background: gray;
+}
+
+.footer .footer-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+header, footer,
+.nav-links {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+  border-bottom: 2px solid purple;
+  padding: 5px;
+  
+}
+
+.user-auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: gray;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.user-auth p {
+  line-height: 0;
+}
+
+.user-auth input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.main-button {
+  background-color: #667eea;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.table-container {
+  margin: 20px;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.table-component {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: white;
+}
+
+.table-component th,
+.table-component td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.table-component th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #333;
+}
+
+.table-component tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-component tr:hover {
+  background-color: #f1f1f1;
+}
