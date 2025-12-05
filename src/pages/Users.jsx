@@ -1,17 +1,31 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import { fetchUsers } from "../utils/users";
 
 const Users = () => {
   const { id } = useParams();
   const [userData, setUserData] = useState("");
-  let allUsers = JSON.parse(localStorage.getItem("Users")) || [];
+  
 
   useEffect(() => {
-    if (allUsers) {
-      let filteredUser = allUsers.filter((item) => item.id == id);
-      setUserData(filteredUser);
-    }
-  }, [id]);
+    const getUser= async () => {
+      try {
+        const userData =await fetchUsers();
+        let filteredUser = userData.filter((item) => item.id == id);
+
+        if(userData) {
+          setUserData(filteredUser);
+        }
+
+      } catch(error) {
+        console.log(error);
+
+      }
+    };
+    getUser();
+  },
+    
+   [id]);
   return (
     <div className="table-container">
       <h3>User Details</h3>
@@ -20,20 +34,24 @@ const Users = () => {
           <thead>
             <tr>
               <th>Id</th>
-              <th>First Name</th>
-              <th>Last Name</th>
+              <th> Name</th>
+              <th>User Name</th>
               <th>Email</th>
-              <th>Password</th>
+              <th>Address</th>
+            
             </tr>
           </thead>
           <tbody>
             {userData.map((user) => (
               <tr key={user.id}>
                 <td>{user.id}</td>
-                <td>{user.firstName}</td>
-                <td>{user.lastName}</td>
+                <td>{user.name}</td>
+                <td>{user.username}</td>
                 <td>{user.email}</td>
-                <td>*******</td>
+                <td>
+                  {user.address?.city}
+                </td>
+               
               </tr>
             ))}
           </tbody>

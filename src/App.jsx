@@ -9,6 +9,8 @@ import { AboutUs } from "./pages/AboutUs";
 import { ContactUs } from "./pages/ContactUs";
 import EditUsers from './pages/EditUsers';
 import Users from './pages/Users';
+import { Userposts } from './pages/Userposts';
+import { ViewPosts } from './pages/ViewPost';
 
 function App() {
   return (
@@ -18,6 +20,10 @@ function App() {
           <Route path="" element={<Home />}></Route>
           <Route path="/users/:id" element={<Users/>}></Route>
           <Route path="/edit/:id" element={<EditUsers/>}></Route>
+          <Route path="/users/:userId/posts" element={<Userposts/>}></Route>
+          <Route path="/users/:userId/posts/:id" element={<ViewPosts/>}></Route>
+
+
         </Route>
         <Route path="register" element={<UserRegistration />}></Route>
         <Route path="login" element={<UserLogin />}></Route>

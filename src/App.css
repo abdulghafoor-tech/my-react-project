@@ -1,6 +1,6 @@
  body {
-     margin: 0;
-     padding: 0;
+    margin: 20px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +22,7 @@ header {
   justify-content: space-around;
   align-content: center;
   gap: 50px;
-  padding: 10px;
+  padding: 20px,0;
   width: 100%;
   box-sizing: border-box;
   background: gray;
@@ -37,6 +37,7 @@ header {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  padding: 45px;
 }
 
 .footer {
@@ -44,7 +45,7 @@ header {
   justify-content: space-between;
   align-content: center;
   gap: 50px;
-  padding: 8px;
+  padding:10px;
   width: 100%;
   box-sizing: border-box;
   margin-top: auto;
@@ -118,7 +119,7 @@ header, footer,
 .table-component th,
 .table-component td {
   border: 1px solid #ddd;
-  padding: 12px;
+  padding: 05px;
   text-align: left;
 }
 
@@ -134,4 +135,52 @@ header, footer,
 
 .table-component tr:hover {
   background-color: #f1f1f1;
+}
+
+.container {
+  .square {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  .square h3 {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: "Merriweather", serif;
+    font-size: 22px;
+  }
+
+  .square p {
+    text-align: justify;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    color: #a3a3a3;
+    line-height: 18px;
+  }
+
+  .square .button {
+    background-color: #3edd84;
+    color: white;
+    width: 120px;
+    padding: 10px 18px;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 70px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: "Merriweather";
+    border: none;
+  }
 }

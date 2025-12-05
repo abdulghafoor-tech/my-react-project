@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 
 function UserLogin() {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
   const [user, setUser] = useState({
     email: "",
     password: "",
